@@ -5,7 +5,6 @@
 
 Vagrant.configure("2") do |config|
 
-	#config.vm.network "public_network", ip: "192.168.56.2"
 	slaves = (1..3)
 
 	config.vm.define "master" do |node|
@@ -20,10 +19,7 @@ Vagrant.configure("2") do |config|
 		end
 
 		node.vm.network :private_network, ip: "10.211.55.200", virtualbox__intnet: true
-		#node.vm.network :public_network, ip: "10.211.55.200"
 		node.vm.network :private_network, ip: "10.211.54.200"
-		#node.vm.network "forwarded_port", guest_ip: "10.211.55.200", guest: 8088, host_ip: "10.211.54.200", host: 8088
-		#node.vm.network "forwarded_port", guest: 8088, host: 8088
 		node.vm.hostname = "node0"
 
 		node.vm.provision "shell",	path: "scripts/update.sh"
@@ -58,7 +54,6 @@ Vagrant.configure("2") do |config|
 			end
 
 			node.vm.network :private_network, ip: "10.211.55.20#{i}", virtualbox__intnet: true
-			#node.vm.network :public_network, ip: "10.211.55.20#{i}"
 			node.vm.hostname = "node#{i}"
 
 			node.vm.provision "shell", path: "scripts/update.sh"
@@ -70,8 +65,7 @@ Vagrant.configure("2") do |config|
 
         	node.vm.provision "shell", path: "scripts/setup-hadoop-1.sh"
         	node.vm.provision "shell",  run: "always", path: "scripts/start-hadoop.sh"
-        	#node.vm.provision "shell", path: "scripts/setup-hadoop-2.sh"
-
+        	
 		end
 
 	end

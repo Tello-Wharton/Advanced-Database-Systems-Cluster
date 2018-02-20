@@ -1,7 +1,15 @@
+127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1 localhost localhost.localdomain localhost6 localhost6.localdomain6
+
 10.211.55.200 master
 10.211.55.201 slave1
 10.211.55.202 slave2
 10.211.55.203 slave3
+
+10.211.55.200 node0
+10.211.55.201 node1
+10.211.55.202 node2
+10.211.55.203 node3
 
 # The following lines are desirable for IPv6 capable hosts
 ::1 ip6-localhost ip6-loopback

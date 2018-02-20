@@ -10,6 +10,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.define "master" do |node|
 
+		node.vm.box_url = "https://vagrantcloud.com/ubuntu/trusty64"
 		node.vm.box = "ubuntu/trusty64"
 
 		node.vm.provider "virtualbox" do |v|

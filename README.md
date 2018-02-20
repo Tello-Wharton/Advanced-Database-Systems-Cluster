@@ -9,7 +9,6 @@
 7. Enter the Advanced-Database-Systems folder
 8. Run ```vagrant up```
 9. Run ```vagrant ssh master``` to ssh into the virtual machine's shell
-10. Use ```sudo -s``` to switch to the root user, the machine, the machine is designed to be used by root
 
 # Useful Commands
 * If there is something wrong with your setup, you can remove everything by using ```vagrant destroy```

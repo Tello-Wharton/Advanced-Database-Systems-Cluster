@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
 	slaves = (1..3)
 
-	config.vm.define "master" do |node|
+	config.vm.define "adb-master" do |node|
 
 		node.vm.box_url = "https://vagrantcloud.com/ubuntu/trusty64"
 		node.vm.box = "ubuntu/trusty64"
@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
 
 	slaves.each do |i|
 
-		config.vm.define "slave#{i}" do |node|
+		config.vm.define "adb-slave#{i}" do |node|
 
 			node.vm.box = "ubuntu/trusty64"
 

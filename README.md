@@ -4,11 +4,11 @@
 2. [Download and install Vagrant](http://www.vagrantup.com/downloads.html)
 3. [Download and install Git for Windows](https://git-scm.com/) (Windows only)
 4. Open Terminal or Git Bash
-5. Clone this repository to a folder of your choice ```git clone https://github.com/Tello-Wharton/Advanced-Database-Systems.git```
+5. Clone this repository to a folder of your choice ```git clone https://github.com/Tello-Wharton/Advanced-Database-Systems-Cluster.git```
 6. Run ```chmod -R 755 Advanced-Database-Systems-Cluster``` on the folder (Linux and Mac only)
 7. Enter the Advanced-Database-Systems folder
 8. Run ```vagrant up```
-9. Run ```vagrant ssh master``` to ssh into the virtual machine's shell
+9. Run ```vagrant ssh adb-master``` (or just ```vagrant ssh master``` for older versions) to ssh into the virtual machine's shell
 
 # Useful Commands
 * If there is something wrong with your setup, you can remove everything by using ```vagrant destroy```

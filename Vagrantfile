@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 		node.vm.box = "ubuntu/trusty64"
 
 		node.vm.provider "virtualbox" do |v|
-		  v.name = "master"
+		  v.name = "adb-master"
 		  v.memory = 2048
 		  v.cpus = 1
 		end
@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
 			node.vm.box = "ubuntu/trusty64"
 
 			node.vm.provider "virtualbox" do |v|
-			  v.name = "slave#{i}"
+			  v.name = "adb-slave#{i}"
 			  v.memory = 2048
 			  v.cpus = 1
 			end

@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
 
 			node.vm.provider "virtualbox" do |v|
 			  v.name = "adb-slave#{i}"
-			  v.memory = 2048
+			  v.memory = 1024
 			  v.cpus = 1
 			end
 

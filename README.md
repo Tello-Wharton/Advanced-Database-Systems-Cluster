@@ -9,6 +9,7 @@
 7. Enter the Advanced-Database-Systems folder
 8. Run ```vagrant up```
 9. Run ```vagrant ssh adb-master``` (or just ```vagrant ssh master``` for older versions) to ssh into the virtual machine's shell
+10. Login with ```vagrant``` as the username and ```vagrant``` as the password
 
 # Useful Commands
 * If there is something wrong with your setup, you can remove everything by using ```vagrant destroy```

@@ -12,6 +12,9 @@ Vagrant.configure("2") do |config|
 		node.vm.box_url = "https://vagrantcloud.com/ubuntu/trusty64"
 		node.vm.box = "ubuntu/trusty64"
 
+  		node.ssh.username = "vagrant"
+  		node.ssh.password = "vagrant"
+
 		node.vm.provider "virtualbox" do |v|
 		  v.name = "adb-master"
 		  v.memory = 2048
@@ -46,6 +49,9 @@ Vagrant.configure("2") do |config|
 		config.vm.define "adb-slave#{i}" do |node|
 
 			node.vm.box = "ubuntu/trusty64"
+
+  			node.ssh.username = "vagrant"
+  			node.ssh.password = "vagrant"
 
 			node.vm.provider "virtualbox" do |v|
 			  v.name = "adb-slave#{i}"
